@@ -36,7 +36,7 @@ describe('auth.profil function', () => {
 describe('auth.register function', () => {
     test('res.json register success', async() => {
         
-            const req = mockRequest({
+        const req = mockRequest({
             name: "Febi Ago",
             username: "user3s21",
             password: "password"
