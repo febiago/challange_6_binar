@@ -15,7 +15,11 @@ module.exports = {
             return res.status(200).json({
                 status: true,
                 message: 'success',
-                data: biodata
+                data: {
+                    id_user : biodata.id_user,
+                    email : biodata.email,
+                    addres : biodata.addres
+                }
             });
 
         } catch (err) {
@@ -62,7 +66,7 @@ module.exports = {
                 });
 
         return res.status(201).json({
-            status: 'success',
+            status: true,
             message: 'success update data!',
             data: {
                 email: email,
@@ -71,7 +75,7 @@ module.exports = {
         });
 
         } catch (err) {
-           // next(err);
+            next(err);
         }
 
     },
@@ -92,7 +96,7 @@ module.exports = {
             message: "success",
           });
         } catch (err) {
-         //   next(err);
+            next(err);
         }
       }
 }

@@ -135,7 +135,7 @@ module.exports = {
                 });
     
             } catch (err) {
-               // next(err);
+             next(err);
             }
 },
 
@@ -146,8 +146,8 @@ module.exports = {
             where: { id: id },
           });
           return res.status(200).json({
-            status: "success",
-            mesage: "Delete data success",
+            status: true,
+            message: "Delete data success",
             data: user
           });
         } catch (err) {

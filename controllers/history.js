@@ -15,7 +15,11 @@ module.exports = {
             return res.status(200).json({
                 status: true,
                 message: 'success',
-                data: history
+                data: {
+                    id_user : history.id_user,
+                    level : history.level,
+                    skill : history.skill
+                }
             });
 
         } catch (err) {
@@ -61,7 +65,7 @@ module.exports = {
                 });
 
         return res.status(201).json({
-            status: 'success',
+            status: true,
             message: 'success update data!',
             data: {
                 level: level,
